@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <fieldset class="tasks">
+        <legend class="tasks__legend">Список дел</legend>
+
+        <article class="tasks__box">
+          <h1 class="tasks__title">
+            Купить лошадь
+          </h1>
+          <p class="tasks__desc">
+            Какое-то дело нужно сделать
+          </p>
+        </article>
+        <!-- /.tasks__box -->
+      </fieldset>
+
+      <fieldset class="created-tasks">
+        <legend class="tasks__legend">Добавить новое дело </legend>
+
+        <article class="created-tasks__box">
+          <label class="created-tasks__label">
+            * Название
+          </label>
+          <input id="created-tasks__input" type="text" name="birth_date">
+
+          <label class="created-tasks__label">
+            * Описание
+          </label>
+          <textarea name="" id="created-tasks__textarea" cols="30" rows="10"></textarea>
+
+          <button class="created-tasks__add-button" type="button">Добавить дело</button>
+        </article>
+        <!-- /.created-tasks__box -->
+      </fieldset>
+    </form>
+    
+  </div>
+  <!-- /.container -->
+</body>
+</html>
