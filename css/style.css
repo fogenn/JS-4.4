@@ -13,7 +13,7 @@ body {
   min-width: 320px;
   font: 14px/20px 'Arial', sans-serif;
   color: #000;
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
 }
 
 input,
@@ -108,6 +108,7 @@ legend {
 }
 
 .created-tasks__box {
+  display: inline-block;
   min-height: 500px;
   background-color: #fff;
   padding: 30px 40px 30px;
@@ -131,6 +132,7 @@ legend {
 }
 
 .created-tasks__add-button {
+  display: inline-block;
   font-size: 16px;
   color: #fff;
   border: none;
