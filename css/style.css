@@ -77,16 +77,65 @@ legend {
   margin: 0;
 }
 
+.tasks__legend {
+  margin: 0;
+  font-size: 21px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.tasks__none {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 16px;
+  color: #8993ad;
+}
+
 .tasks__box {
+  position: relative;
   min-height: 135px;
   background-color: #fff;
 }
 
-.tasks__title {
-  margin: 0;
-  font-weight: normal;
+.tasks_header {
+  vertical-align: middle;
+  position: relative;
   padding: 20px 20px;
-  border-bottom: 1px solid #f7f7f7;
+}
+
+.tasks__delete,
+.tasks__scroll {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  position: absolute;
+  outline: none;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 15px;
+  height: 15px;
+  background: transparent center no-repeat;
+  background-size: auto;
+  object-fit: cover;
+}
+
+.tasks__delete {
+  background-image: url('../img/clear-button.png');
+}
+
+.tasks__scroll {
+  right: 20px;
+  background-image: url('../img/scroll.png');
+}
+
+
+.tasks__title {
+  display: inline-block;
+  margin: 0;
+  margin-right: 20px;
+  font-weight: normal;
   font-size: 16px;
   line-height: 16px;
 }
@@ -97,6 +146,8 @@ legend {
   font-size: 14px;
   line-height: 14px;
   color: #8993ad;
+  width: 100%;
+  border-top: 1px solid #f7f7f7;
 }
 
 .created-tasks {
@@ -111,12 +162,12 @@ legend {
   display: inline-block;
   min-height: 500px;
   background-color: #fff;
-  padding: 30px 40px 30px;
+  padding: 28px 40px 30px;
 }
 
 .created-tasks__label {
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   color: #8993ad;
 }
 
@@ -128,7 +179,7 @@ legend {
 #created-tasks__textarea {
   resize: none;
   height: 230px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .created-tasks__add-button {

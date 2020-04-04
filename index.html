@@ -4,27 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/scripts.js"></script>
   <title>Список дел</title>
 </head>
 <body>
   <div class="container">
     
-    <form action="#" method="POST" enctype="multipart/form-data">
-      <fieldset class="tasks">
-        <legend class="tasks__legend">Список дел</legend>
+    <div class="tasks">
+      <h1 class="tasks__legend">Список дел</h1>
 
-        <article class="tasks__box">
-          <h1 class="tasks__title">
+      <div class="tasks__none">Список пуст...</div>
+      
+      <article class="tasks__box">
+        
+        <div class="tasks_header">
+          <h2 class="tasks__title">
             Купить лошадь
-          </h1>
-          <p class="tasks__desc">
-            Какое-то дело нужно сделать
-          </p>
-        </article>
-        <!-- /.tasks__box -->
-      </fieldset>
+          </h2>
+          <button class="tasks__delete"></button>
+          <button class="tasks__scroll"></button>
+        </div>
+
+        <p class="tasks__desc">
+          Какое-то дело нужно сделать
+        </p>
+      </article>
+      <!-- /.tasks__box -->
+    </div>
+    
+    <form action="#" method="POST" enctype="multipart/form-data">
 
       <fieldset class="created-tasks">
         <legend class="tasks__legend">Добавить новое дело </legend>
@@ -44,9 +51,12 @@
         </article>
         <!-- /.created-tasks__box -->
       </fieldset>
+      
     </form>
     
   </div>
   <!-- /.container -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
