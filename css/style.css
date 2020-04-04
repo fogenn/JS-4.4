@@ -2,6 +2,11 @@ html {
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 *,
 ::before,
 ::after {
@@ -9,7 +14,6 @@ html {
 }
 
 body {
-  margin: 0;
   min-width: 320px;
   font: 14px/20px 'Arial', sans-serif;
   color: #000;
@@ -44,27 +48,27 @@ a:focus {
   text-decoration: none;
 }
 
-p {
-  margin-top: 0;
+/* анимация */
+
+.rotate {
+  transform: rotate(90deg);
+  transition-duration: 0.400s;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
+.unrotate {
+  transform: rotate(0deg);
+  transition-duration: 0.400s;
 }
 
-form {
-  margin-top: 65px;
-}
-
-legend {
-  display: inline-block;
-  margin: 0;
-  font-size: 21px;
-  margin-bottom: 30px;
+/* /анимация */
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .container {
+  padding-top: 65px;
   margin: 0 auto;
   width: 960px;
 }
@@ -72,20 +76,15 @@ legend {
 .tasks {
   float: left;
   width: 470px;
-  border: none;
-  padding: 0;
-  margin: 0;
 }
 
 .tasks__legend {
-  margin: 0;
   font-size: 21px;
   font-weight: normal;
   margin-bottom: 30px;
 }
 
 .tasks__none {
-  margin: 0;
   padding: 20px 0;
   font-size: 16px;
   line-height: 16px;
@@ -94,20 +93,19 @@ legend {
 
 .tasks__box {
   position: relative;
-  min-height: 135px;
-  background-color: #fff;
+  margin-bottom: 20px;
 }
 
 .tasks_header {
   vertical-align: middle;
   position: relative;
   padding: 20px 20px;
+  background-color: #fff;
 }
 
 .tasks__delete,
 .tasks__scroll {
   display: inline-block;
-  padding: 0;
   border: none;
   position: absolute;
   outline: none;
@@ -133,7 +131,6 @@ legend {
 
 .tasks__title {
   display: inline-block;
-  margin: 0;
   margin-right: 20px;
   font-weight: normal;
   font-size: 16px;
@@ -141,29 +138,36 @@ legend {
 }
 
 .tasks__desc {
-  margin: 0;
+  display: block;
   padding: 20px 20px;
+  width: 100%;
+  height: 85px;
   font-size: 14px;
   line-height: 14px;
   color: #8993ad;
-  width: 100%;
+  background-color: #fff;
   border-top: 1px solid #f7f7f7;
 }
 
 .created-tasks {
-  float: right;
   width: 470px;
-  border: none;
-  padding: 0;
-  margin: 0;
+  float: right;
+  min-height: 500px;
+  
 }
 
-.created-tasks__box {
-  display: inline-block;
-  min-height: 500px;
-  background-color: #fff;
-  padding: 28px 40px 30px;
+.created-tasks__legend {
+  font-size: 21px;
+  font-weight: normal;
+  margin-bottom: 30px;
 }
+
+.created-tasks__field {
+  padding: 28px 40px 30px;
+  border: none;
+  background-color: #fff;
+}
+
 
 .created-tasks__label {
   display: inline-block;
@@ -182,7 +186,7 @@ legend {
   font-size: 16px;
 }
 
-.created-tasks__add-button {
+#created-tasks__add-button {
   display: inline-block;
   font-size: 16px;
   color: #fff;
