@@ -197,6 +197,10 @@ a:focus {
   background-color: #2174fd;
 }
 
+/* 
+Стили для кнопки(которая вызывает Popup) и Popup контейнера 
+ */
+
 #created-tasks__ads {
   display: inline-block;
   font-size: 16px;
@@ -216,6 +220,7 @@ a:focus {
 }
 
 .popup {
+  overflow: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -224,6 +229,7 @@ a:focus {
   width: 300px;
   height: 500px;
   background-color: #fff;
+  padding: 20px;
 }
 
 .fixed {
