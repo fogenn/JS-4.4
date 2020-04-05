@@ -51,18 +51,25 @@ $(document).ready(function () {
     }
 
   }
+
+  function disableScroll() {
+
+    $("html,body").toggleClass('fixed');
+    
+  }
+  
   // </блок функций>
 
   $('#created-tasks__add-button').on('click', addTask);
 
-  $('body').on('click', '.tasks__delete', function(){
+  $('body').on('click', '.tasks__delete', function () {
 
     let item = $(this).parents('.tasks__box');
 
     deleteTask(item);
   });
 
-  $('body').on('click', '.tasks__scroll', function (){
+  $('body').on('click', '.tasks__scroll', function () {
 
     let par = $(this).parents('.tasks__box');
     
@@ -85,5 +92,21 @@ $(document).ready(function () {
       
     }
   });
+
+  $('#created-tasks__ads').on('click', function () {
+
+    $('.popup-container').fadeIn(disableScroll);
+    
+  })
+
+  $('.popup-container').on('click', function (event) {
+
+    if (event.target == this) {
+
+      $(this).fadeOut(disableScroll);
+
+    }
+
+  })
 
 });
