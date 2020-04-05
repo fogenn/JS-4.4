@@ -18,6 +18,7 @@ body {
   font: 14px/20px 'Arial', sans-serif;
   color: #000;
   background-color: #f7f7f7;
+  height: 500vh;
 }
 
 input,
@@ -194,4 +195,39 @@ a:focus {
   border: none;
   padding: 20px 55px;
   background-color: #2174fd;
+}
+
+#created-tasks__ads {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  padding: 20px 20px;
+  margin-left: 50px;
+  background-color: #7521fd;
+}
+
+.popup-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 500px;
+  background-color: #fff;
+}
+
+.fixed {
+  overflow: hidden;
+  position: fixed;
+  width:100%;
 }
