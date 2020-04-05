@@ -61,6 +61,7 @@ a:focus {
 }
 
 /* /анимация */
+
 .clearfix {
   content: '';
   display: table;
