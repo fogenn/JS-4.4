@@ -6,8 +6,6 @@ $(document).ready(function () {
     let name = $('#created-tasks__input').val(),
       text = $('#created-tasks__textarea').val();
 
-    console.log(name.length, text.length)
-
     if (name.length !== 0 && text.length !== 0) {
 
       $('.tasks__none').hide();
@@ -17,9 +15,9 @@ $(document).ready(function () {
       <article class="tasks__box">
 
         <div class="tasks_header">
-          <h2 class="tasks__title">
+          <h3 class="tasks__title">
             ${name}
-          </h2>
+          </h3>
           <button class="tasks__delete"></button>
           <button class="tasks__scroll"></button>
         </div>
@@ -43,10 +41,9 @@ $(document).ready(function () {
 
     let items = $('.tasks__box');
 
-    console.log(item, items)
 
     if (items.length == 0) {
-      console.log('pusto')
+      
       $('.tasks__none').show();
     }
 
@@ -73,7 +70,6 @@ $(document).ready(function () {
 
     let par = $(this).parents('.tasks__box');
     
-    console.log(par)
 
     $(par).find('.tasks__desc').slideToggle();
 
