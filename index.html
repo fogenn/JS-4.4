@@ -8,39 +8,44 @@
 </head>
 <body>
 
+  <!--  Создание POPUP контейнера для демонстрации отключения скролла -->
   <div class="popup-container">
-    <div class="popup"></div>
+    <div class="popup">Lorem ipsum dolor sit amet consectetur adipisicing elit. At aspernatur non a repudiandae dolorum voluptatibus repellat aut sunt consequatur neque et tenetur architecto, temporibus ullam tempore vitae quasi! Numquam laboriosam dolore incidunt enim dignissimos expedita aliquid, cum in inventore assumenda quod molestiae corporis amet nostrum dolorem nemo distinctio. Expedita tempore molestiae commodi aperiam nemo, atque consectetur voluptas sit nesciunt neque, explicabo officia obcaecati nam adipisci magnam molestias alias quo ducimus dignissimos dolores, vitae iste fuga! Reiciendis atque voluptas, eum error necessitatibus ullam odit animi veniam laboriosam rem doloremque illum optio omnis quas facere distinctio, laborum possimus ex. Fugit, quasi obcaecati? Dolorum, nihil deserunt fugiat cumque, animi iure, neque earum esse praesentium nostrum dolores autem ab. Quas, nostrum. Accusamus expedita harum optio. Aspernatur, ipsam ducimus molestiae id aliquid cupiditate commodi iste, quam reprehenderit at iure veniam excepturi soluta officiis ex assumenda iusto dolorum amet culpa sit officia! Debitis, nostrum? Ea nobis dolore natus, adipisci delectus accusamus quidem, amet dolores ullam harum optio porro id iusto velit ipsum earum consequuntur minima quos laborum veritatis. Dolor et ullam nam laudantium distinctio excepturi aspernatur veritatis asperiores architecto quae quos accusantium, magnam eligendi aliquid consequuntur voluptatem dolores eveniet. Eos aliquid commodi necessitatibus quidem. Assumenda, ut.</div>
   </div>
+  <!-- / Создание POPUP контейнера для демонстрации отключения скролла -->
+
 
   <div class="container clearfix">
     
-    <div class="tasks">
-      <h2 class="tasks__legend">Список дел</h2>
+    <section class="tasks">
+      <h2>Список дел</h2>
 
       <div class="tasks__none">Список пуст...</div>
-    </div>
+    </section>
     
-    <form class="created-tasks" action="#" method="POST" enctype="multipart/form-data">
+    <section class="created-tasks">
 
-      <h2 class="created-tasks__legend">Добавить новое дело </h2>
-      <fieldset class="created-tasks__field">
+      <h2>Добавить новое дело</h2>
+  
+      <form class="created-tasks__form" action="#" method="POST" enctype="multipart/form-data">
+  
+        <label class="created-tasks__label" for="created-tasks__input">
+          * Название
+        </label>
+        <input id="created-tasks__input" maxlength="42" placeholder="Введите заголовок/название задачи" type="text" name="created-tasks__input">
+  
+        <label class="created-tasks__label" for="created-tasks__textarea">
+          * Описание
+        </label>
+        <textarea name="created-tasks__textarea" id="created-tasks__textarea" placeholder="Введите описание задачи"></textarea>
+  
+        <button id="created-tasks__add-button" type="button" aria-label="Добавить дело">Добавить дело</button>
+  
+        <button id="created-tasks__ads" type="button" aria-label="всплывающее окно">Popup</button>
+        
+      </form>
 
-          <label class="created-tasks__label" for="created-tasks__input">
-            * Название
-          </label>
-          <input id="created-tasks__input" type="text" name="created-tasks__input">
-
-          <label class="created-tasks__label" for="created-tasks__textarea">
-            * Описание
-          </label>
-          <textarea name="created-tasks__textarea" id="created-tasks__textarea"></textarea>
-
-          <button id="created-tasks__add-button" type="button">Добавить дело</button>
-
-          <button id="created-tasks__ads" type="button">Popup</button>
-      </fieldset>
-      
-    </form>
+    </section>
     
   </div>
   <!-- /.container -->
@@ -48,3 +53,4 @@
   <script src="js/scripts.js"></script>
 </body>
 </html>
+

@@ -6,9 +6,11 @@ $(document).ready(function () {
     let name = $('#created-tasks__input').val(),
       text = $('#created-tasks__textarea').val();
 
-    console.log(name.length, text.length)
-
     if (name.length !== 0 && text.length !== 0) {
+
+      $('#created-tasks__input').removeClass('error');
+      
+      $('#created-tasks__textarea').removeClass('error');
 
       $('.tasks__none').hide();
 
@@ -17,11 +19,11 @@ $(document).ready(function () {
       <article class="tasks__box">
 
         <div class="tasks_header">
-          <h2 class="tasks__title">
+          <h3 class="tasks__title">
             ${name}
-          </h2>
-          <button class="tasks__delete"></button>
-          <button class="tasks__scroll"></button>
+          </h3>
+          <button class="tasks__delete" aria-label="удалить задачу"></button>
+          <button class="tasks__scroll" aria-label="свернуть описание задачи"></button>
         </div>
 
         <p class="tasks__desc">
@@ -34,6 +36,28 @@ $(document).ready(function () {
       name = $('#created-tasks__input').val('');
       text = $('#created-tasks__textarea').val('');
 
+    } else {
+
+      if (name.length == 0) {
+
+        $('#created-tasks__input').addClass('error');
+
+      } else {
+
+        $('#created-tasks__input').removeClass('error');
+
+      }
+
+      if (text.length == 0) {
+
+        $('#created-tasks__textarea').addClass('error');
+
+      } else {
+
+        $('#created-tasks__textarea').removeClass('error');
+
+      }
+
     }
   }
 
@@ -43,10 +67,9 @@ $(document).ready(function () {
 
     let items = $('.tasks__box');
 
-    console.log(item, items)
 
     if (items.length == 0) {
-      console.log('pusto')
+
       $('.tasks__none').show();
     }
 
@@ -55,9 +78,9 @@ $(document).ready(function () {
   function disableScroll() {
 
     $("html,body").toggleClass('fixed');
-    
+
   }
-  
+
   // </блок функций>
 
   $('#created-tasks__add-button').on('click', addTask);
@@ -69,16 +92,16 @@ $(document).ready(function () {
     deleteTask(item);
   });
 
+
   $('body').on('click', '.tasks__scroll', function () {
 
     let par = $(this).parents('.tasks__box');
-    
-    console.log(par)
+
 
     $(par).find('.tasks__desc').slideToggle();
 
-    // $(this).toggleClass('rotate');
-    if ($(this).hasClass('rotate')){
+
+    if ($(this).hasClass('rotate')) {
 
       $(this).addClass('unrotate');
 
@@ -89,15 +112,17 @@ $(document).ready(function () {
       $(this).removeClass('unrotate');
 
       $(this).addClass('rotate');
-      
+
     }
   });
+
 
   $('#created-tasks__ads').on('click', function () {
 
     $('.popup-container').fadeIn(disableScroll);
-    
+
   })
+
 
   $('.popup-container').on('click', function (event) {
 
