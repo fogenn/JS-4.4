@@ -35,7 +35,6 @@ textarea {
 input::placeholder {
   font: 12px 'Arial', sans-serif;
   color: #8993ad8e;
-  vertical-align: middle;
 }
 
 textarea::placeholder {
