@@ -18,32 +18,34 @@
   <div class="container clearfix">
     
     <section class="tasks">
-      <h2 class="tasks__legend">Список дел</h2>
+      <h2>Список дел</h2>
 
       <div class="tasks__none">Список пуст...</div>
     </section>
     
-    <form class="created-tasks" action="#" method="POST" enctype="multipart/form-data">
+    <section class="created-tasks">
 
-      <h2 class="created-tasks__legend">Добавить новое дело </h2>
-      <fieldset class="created-tasks__field">
+      <h2>Добавить новое дело</h2>
+  
+      <form class="created-tasks__form" action="#" method="POST" enctype="multipart/form-data">
+  
+        <label class="created-tasks__label" for="created-tasks__input">
+          * Название
+        </label>
+        <input id="created-tasks__input" maxlength="42" placeholder="Введите заголовок/название задачи" type="text" name="created-tasks__input">
+  
+        <label class="created-tasks__label" for="created-tasks__textarea">
+          * Описание
+        </label>
+        <textarea name="created-tasks__textarea" id="created-tasks__textarea" placeholder="Введите описание задачи"></textarea>
+  
+        <button id="created-tasks__add-button" type="button" aria-label="Добавить дело">Добавить дело</button>
+  
+        <button id="created-tasks__ads" type="button" aria-label="всплывающее окно">Popup</button>
+        
+      </form>
 
-          <label class="created-tasks__label" for="created-tasks__input">
-            * Название
-          </label>
-          <input id="created-tasks__input" maxlength="42" type="text" name="created-tasks__input">
-
-          <label class="created-tasks__label" for="created-tasks__textarea">
-            * Описание
-          </label>
-          <textarea name="created-tasks__textarea" id="created-tasks__textarea"></textarea>
-
-          <button id="created-tasks__add-button" type="button" aria-label="Добавить дело">Добавить дело</button>
-
-          <button id="created-tasks__ads" type="button" aria-label="всплывающее окно">Popup</button>
-      </fieldset>
-      
-    </form>
+    </section>
     
   </div>
   <!-- /.container -->

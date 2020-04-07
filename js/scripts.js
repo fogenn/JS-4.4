@@ -8,6 +8,10 @@ $(document).ready(function () {
 
     if (name.length !== 0 && text.length !== 0) {
 
+      $('#created-tasks__input').removeClass('error');
+      
+      $('#created-tasks__textarea').removeClass('error');
+
       $('.tasks__none').hide();
 
       $('.tasks').append(`
@@ -32,6 +36,28 @@ $(document).ready(function () {
       name = $('#created-tasks__input').val('');
       text = $('#created-tasks__textarea').val('');
 
+    } else {
+
+      if (name.length == 0) {
+
+        $('#created-tasks__input').addClass('error');
+
+      } else {
+
+        $('#created-tasks__input').removeClass('error');
+
+      }
+
+      if (text.length == 0) {
+
+        $('#created-tasks__textarea').addClass('error');
+
+      } else {
+
+        $('#created-tasks__textarea').removeClass('error');
+
+      }
+
     }
   }
 
@@ -43,7 +69,7 @@ $(document).ready(function () {
 
 
     if (items.length == 0) {
-      
+
       $('.tasks__none').show();
     }
 
@@ -52,9 +78,9 @@ $(document).ready(function () {
   function disableScroll() {
 
     $("html,body").toggleClass('fixed');
-    
+
   }
-  
+
   // </блок функций>
 
   $('#created-tasks__add-button').on('click', addTask);
@@ -70,12 +96,12 @@ $(document).ready(function () {
   $('body').on('click', '.tasks__scroll', function () {
 
     let par = $(this).parents('.tasks__box');
-    
+
 
     $(par).find('.tasks__desc').slideToggle();
 
 
-    if ($(this).hasClass('rotate')){
+    if ($(this).hasClass('rotate')) {
 
       $(this).addClass('unrotate');
 
@@ -86,15 +112,15 @@ $(document).ready(function () {
       $(this).removeClass('unrotate');
 
       $(this).addClass('rotate');
-      
+
     }
   });
 
-  
+
   $('#created-tasks__ads').on('click', function () {
 
     $('.popup-container').fadeIn(disableScroll);
-    
+
   })
 
 
