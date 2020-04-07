@@ -18,8 +18,8 @@ $(document).ready(function () {
           <h3 class="tasks__title">
             ${name}
           </h3>
-          <button class="tasks__delete"></button>
-          <button class="tasks__scroll"></button>
+          <button class="tasks__delete" aria-label="удалить задачу"></button>
+          <button class="tasks__scroll" aria-label="свернуть описание задачи"></button>
         </div>
 
         <p class="tasks__desc">
@@ -66,6 +66,7 @@ $(document).ready(function () {
     deleteTask(item);
   });
 
+
   $('body').on('click', '.tasks__scroll', function () {
 
     let par = $(this).parents('.tasks__box');
@@ -73,7 +74,7 @@ $(document).ready(function () {
 
     $(par).find('.tasks__desc').slideToggle();
 
-    // $(this).toggleClass('rotate');
+
     if ($(this).hasClass('rotate')){
 
       $(this).addClass('unrotate');
@@ -89,11 +90,13 @@ $(document).ready(function () {
     }
   });
 
+  
   $('#created-tasks__ads').on('click', function () {
 
     $('.popup-container').fadeIn(disableScroll);
     
   })
+
 
   $('.popup-container').on('click', function (event) {
 

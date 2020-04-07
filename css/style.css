@@ -99,7 +99,6 @@ a:focus {
 }
 
 .tasks_header {
-  word-wrap: break-word;
   vertical-align: middle;
   position: relative;
   padding: 20px 20px;

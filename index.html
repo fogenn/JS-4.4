@@ -17,11 +17,11 @@
 
   <div class="container clearfix">
     
-    <div class="tasks">
+    <section class="tasks">
       <h2 class="tasks__legend">Список дел</h2>
 
       <div class="tasks__none">Список пуст...</div>
-    </div>
+    </section>
     
     <form class="created-tasks" action="#" method="POST" enctype="multipart/form-data">
 
@@ -31,16 +31,16 @@
           <label class="created-tasks__label" for="created-tasks__input">
             * Название
           </label>
-          <input id="created-tasks__input" type="text" name="created-tasks__input">
+          <input id="created-tasks__input" maxlength="42" type="text" name="created-tasks__input">
 
           <label class="created-tasks__label" for="created-tasks__textarea">
             * Описание
           </label>
           <textarea name="created-tasks__textarea" id="created-tasks__textarea"></textarea>
 
-          <button id="created-tasks__add-button" type="button">Добавить дело</button>
+          <button id="created-tasks__add-button" type="button" aria-label="Добавить дело">Добавить дело</button>
 
-          <button id="created-tasks__ads" type="button">Popup</button>
+          <button id="created-tasks__ads" type="button" aria-label="всплывающее окно">Popup</button>
       </fieldset>
       
     </form>
