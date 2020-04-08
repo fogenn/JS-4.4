@@ -129,7 +129,6 @@ h2 {
 
 .tasks__delete,
 .tasks__scroll {
-  display: inline-block;
   border: none;
   outline: none;
   width: 15px;
