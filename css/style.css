@@ -119,6 +119,8 @@ h2 {
 }
 
 .tasks_header {
+  display: flex;
+  align-items: center;
   vertical-align: middle;
   position: relative;
   padding: 20px 20px;
@@ -129,11 +131,7 @@ h2 {
 .tasks__scroll {
   display: inline-block;
   border: none;
-  position: absolute;
   outline: none;
-  top: 0;
-  bottom: 0;
-  margin: auto;
   width: 15px;
   height: 15px;
   background: transparent center no-repeat;
@@ -146,7 +144,7 @@ h2 {
 }
 
 .tasks__scroll {
-  right: 20px;
+  margin-left: auto;
   background-image: url('../img/scroll.png');
 }
 
