@@ -1,4 +1,4 @@
 # Список дел на JS
 Мой домашний проект приуроченный к изучению JS
 ---
-https://fogenn.github.io/JS-4.8/
+[Список дел](https://fogenn.github.io/JS-4.8/)
